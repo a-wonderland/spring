@@ -31,6 +31,7 @@ public class App {
 
 	private static ResourceBundle message;
 	private static BufferedReader reader;
+	private static StudentDAO stdDAO;
 
 	/**
 	 * Default no-argument constructor
@@ -44,6 +45,11 @@ public class App {
 
 		// load message resource
 		message = HelperFunction.loadResource(Constant.MESSAGESOURCE);
+
+		// loading config and beans
+		ApplicationContext appContext = new ClassPathXmlApplicationContext(
+				"Spring-Module.xml");
+		stdDAO = (StudentDAO) appContext.getBean("studentDAO");
 
 		// read input from console
 		InputStreamReader inputStream = new InputStreamReader(System.in);
@@ -89,11 +95,6 @@ public class App {
 		String usrStartDate = null;
 		String usrEndDate = null;
 
-		// loading config and beans
-		ApplicationContext appContext = new ClassPathXmlApplicationContext(
-				"Spring-Module.xml");
-		StudentDAO stdDAO = (StudentDAO) appContext.getBean("studentDAO");
-
 		// format date
 		SimpleDateFormat simpleFormat = new SimpleDateFormat("dd/M/yyyy");
 		Date startDate = null;
@@ -102,23 +103,44 @@ public class App {
 		if ((choice).toUpperCase().equals("INSERT")) {
 
 			try {
+				Student student = new Student();
 				System.out.println(message.getString(Constant.FIRST_NAME));
 				firstName = reader.readLine();
+				if (!HelperFunction.isEmpty(firstName)) {
+					student.setFirstName(firstName);
+				}
 
 				System.out.println(message.getString(Constant.LAST_NAME));
 				lastName = reader.readLine();
+				if (!HelperFunction.isEmpty(lastName)) {
+					student.setLastName(lastName);
+				}
 
 				System.out.println(message.getString(Constant.COURSE));
 				course = reader.readLine();
+				if (!HelperFunction.isEmpty(course)) {
+					student.setCourse(course);
+				}
 
 				System.out.println(message.getString(Constant.FEE));
 				fee = reader.readLine();
+				if (!HelperFunction.isEmpty(fee)) {
+					student.setFee(Float.parseFloat(fee));
+				}
 
 				System.out.println(message.getString(Constant.START_DATE));
 				usrStartDate = reader.readLine();
+				if (!HelperFunction.isEmpty(usrStartDate)) {
+					student.setStartDate(simpleFormat.parse(usrStartDate));
+
+				}
 
 				System.out.println(message.getString(Constant.END_DATE));
 				usrEndDate = reader.readLine();
+				if (!HelperFunction.isEmpty(usrEndDate)) {
+					student.setEndDate(simpleFormat.parse(usrEndDate));
+
+				}
 
 				// convert string to date
 				startDate = simpleFormat.parse(usrStartDate);
@@ -129,9 +151,11 @@ public class App {
 
 				if (valid) {
 
-					Student std = new Student(firstName, lastName, course,
-							Float.parseFloat(fee), startDate, endDate);
-					int restult = stdDAO.insertStudent(std);
+					/*
+					 * Student std = new Student(firstName, lastName, course,
+					 * Float.parseFloat(fee), startDate, endDate);
+					 */
+					int restult = stdDAO.insertStudent(student);
 					if (restult == 1) {
 						System.out.println(message.getString(Constant.SAVE));
 					} else {
@@ -147,11 +171,21 @@ public class App {
 		} else if ((choice).toUpperCase().equals("RETRIEVE")) {
 
 			try {
+				/*
+				 * System.out.println(message.getString(Constant.STUDENT_ID));
+				 * id = Integer.parseInt(reader.readLine());
+				 * 
+				 * if (stdDAO.getStudentByID(id) != null) {
+				 * System.out.println(stdDAO.getStudentByID(id)); } else {
+				 * System.out.println(message.getString(Constant.FAIL)); }
+				 */
+
 				System.out.println(message.getString(Constant.COURSE));
 				course = reader.readLine();
 				for (Student iter : stdDAO.retrieveStudentByCourse(course)) {
 					System.out.println(iter);
 				}
+
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
