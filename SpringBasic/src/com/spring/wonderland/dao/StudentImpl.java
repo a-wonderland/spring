@@ -22,8 +22,13 @@ public class StudentImpl implements StudentDAO {
 
 	private DataSource data;
 
-	public void setData(DataSource data) {
+	/*
+	 * public void setData(DataSource data) { this.data = data; }
+	 */
+	@Override
+	public void setDataSource(DataSource data) {
 		this.data = data;
+
 	}
 
 	@Override
@@ -184,7 +189,7 @@ public class StudentImpl implements StudentDAO {
 					HelperFunction.convertToSqlDate(student.getStartDate()));
 			ps.setDate(6, HelperFunction.convertToSqlDate(student.getEndDate()));
 			ps.setInt(7, student.getId());
-			
+
 			int status = ps.executeUpdate();
 			if (status != 0) {
 				return Constant.SUCCESS;

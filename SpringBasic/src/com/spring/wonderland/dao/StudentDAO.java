@@ -2,6 +2,8 @@ package com.spring.wonderland.dao;
 
 import java.util.List;
 
+import javax.sql.DataSource;
+
 import com.spring.wonderland.persistent.Student;
 
 /**
@@ -13,6 +15,7 @@ import com.spring.wonderland.persistent.Student;
 
 public interface StudentDAO {
 
+	public abstract void setDataSource(DataSource data);
 	/**
 	 * Save Student object to database
 	 * 
