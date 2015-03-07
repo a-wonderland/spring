@@ -15,7 +15,8 @@ import com.spring.wonderland.persistent.Student;
 
 public interface StudentDAO {
 
-	public abstract void setDataSource(DataSource data);
+	public abstract DataSource getData();
+	public abstract void setDataSource(DataSource dataSource);
 	/**
 	 * Save Student object to database
 	 * 

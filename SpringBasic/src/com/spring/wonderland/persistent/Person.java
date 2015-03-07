@@ -32,6 +32,15 @@ public abstract class Person implements Serializable {
 		this.firstName = firstName;
 		this.lastName = lastName;
 	}
+	/**
+	 * Constructor for retrieve
+	 */
+	public Person(int id, String firstName, String lastName) {
+		super();
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
 
 	private int id;
 	private String firstName;

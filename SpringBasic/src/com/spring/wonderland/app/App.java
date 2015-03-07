@@ -171,6 +171,7 @@ public class App {
 		} else if ((choice).toUpperCase().equals("RETRIEVE")) {
 
 			try {
+				//System.out.println(stdDAO.retrieveStudentCollection());
 				/*
 				 * System.out.println(message.getString(Constant.STUDENT_ID));
 				 * id = Integer.parseInt(reader.readLine());

@@ -4,6 +4,6 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<bean id="studentDAO" class="com.spring.wonderland.dao.StudentImpl">
-		<property name="data" ref="dataSource"></property>
+		<property name="dataSource" ref="dataSource"></property>
 	</bean>
 </beans>

@@ -1,0 +1,46 @@
+12:18:54,562  INFO ClassPathXmlApplicationContext:456 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@22c03da9: startup date [Sat Mar 07 12:18:54 MMT 2015]; root of context hierarchy
+  12:18:54,788  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [Spring-Module.xml]
+  12:18:55,230  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [database/Spring-Datasource.xml]
+  12:18:55,387  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [beans/Spring-Student.xml]
+  12:18:55,631  INFO DefaultListableBeanFactory:555 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@458debd3: defining beans [dataSource,studentDAO]; root of factory hierarchy
+  12:18:55,759  INFO DriverManagerDataSource:153 - Loaded JDBC driver: com.mysql.jdbc.Driver
+  12:18:55,815  INFO DefaultListableBeanFactory:422 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@458debd3: defining beans [dataSource,studentDAO]; root of factory hierarchy
+  12:19:44,523  INFO ClassPathXmlApplicationContext:456 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@22c03da9: startup date [Sat Mar 07 12:19:44 MMT 2015]; root of context hierarchy
+  12:19:44,725  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [Spring-Module.xml]
+  12:19:45,271  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [database/Spring-Datasource.xml]
+  12:19:45,383  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [beans/Spring-Student.xml]
+  12:19:45,542  INFO DefaultListableBeanFactory:555 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3a6c44c5: defining beans [dataSource,studentDAO]; root of factory hierarchy
+  12:19:45,651  INFO DriverManagerDataSource:153 - Loaded JDBC driver: com.mysql.jdbc.Driver
+  12:19:45,677  INFO DefaultListableBeanFactory:422 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3a6c44c5: defining beans [dataSource,studentDAO]; root of factory hierarchy
+  12:26:16,526  INFO ClassPathXmlApplicationContext:456 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@22c03da9: startup date [Sat Mar 07 12:26:16 MMT 2015]; root of context hierarchy
+  12:26:16,731  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [Spring-Module.xml]
+  12:26:17,164  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [database/Spring-Datasource.xml]
+  12:26:17,295  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [beans/Spring-Student.xml]
+  12:26:17,459  INFO DefaultListableBeanFactory:555 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3a6c44c5: defining beans [dataSource,studentDAO]; root of factory hierarchy
+  12:26:17,572  INFO DriverManagerDataSource:153 - Loaded JDBC driver: com.mysql.jdbc.Driver
+  12:26:17,599  INFO DefaultListableBeanFactory:422 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3a6c44c5: defining beans [dataSource,studentDAO]; root of factory hierarchy
+  12:31:47,800  INFO ClassPathXmlApplicationContext:456 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7b103411: startup date [Sat Mar 07 12:31:47 MMT 2015]; root of context hierarchy
+  12:31:48,154  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [Spring-Module.xml]
+  12:31:48,869  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [database/Spring-Datasource.xml]
+  12:31:49,003  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [beans/Spring-Student.xml]
+  12:31:49,215  INFO DefaultListableBeanFactory:555 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3821e98d: defining beans [dataSource,studentDAO]; root of factory hierarchy
+  12:31:49,350  INFO DriverManagerDataSource:153 - Loaded JDBC driver: com.mysql.jdbc.Driver
+  12:32:51,475  INFO ClassPathXmlApplicationContext:456 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6ab45b29: startup date [Sat Mar 07 12:32:51 MMT 2015]; root of context hierarchy
+  12:32:51,689  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [Spring-Module.xml]
+  12:32:52,195  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [database/Spring-Datasource.xml]
+  12:32:52,301  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [beans/Spring-Student.xml]
+  12:32:52,459  INFO DefaultListableBeanFactory:555 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7d90f66a: defining beans [dataSource,studentDAO]; root of factory hierarchy
+  12:32:52,565  INFO DriverManagerDataSource:153 - Loaded JDBC driver: com.mysql.jdbc.Driver
+  12:38:31,261  INFO ClassPathXmlApplicationContext:456 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@66cd1779: startup date [Sat Mar 07 12:38:31 MMT 2015]; root of context hierarchy
+  12:38:31,468  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [Spring-Module.xml]
+  12:38:31,933  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [database/Spring-Datasource.xml]
+  12:38:32,047  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [beans/Spring-Student.xml]
+  12:38:32,224  INFO DefaultListableBeanFactory:555 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3821e98d: defining beans [dataSource,studentDAO]; root of factory hierarchy
+  12:38:32,349  INFO DriverManagerDataSource:153 - Loaded JDBC driver: com.mysql.jdbc.Driver
+  12:39:33,605  INFO ClassPathXmlApplicationContext:456 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@22c03da9: startup date [Sat Mar 07 12:39:33 MMT 2015]; root of context hierarchy
+  12:39:33,830  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [Spring-Module.xml]
+  12:39:34,344  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [database/Spring-Datasource.xml]
+  12:39:34,455  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [beans/Spring-Student.xml]
+  12:39:34,613  INFO DefaultListableBeanFactory:555 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@24eb147c: defining beans [dataSource,studentDAO]; root of factory hierarchy
+  12:39:34,720  INFO DriverManagerDataSource:153 - Loaded JDBC driver: com.mysql.jdbc.Driver
+  

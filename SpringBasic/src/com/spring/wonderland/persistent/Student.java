@@ -30,6 +30,7 @@ public class Student extends Person {
 	/**
 	 * Student class explicit constructor
 	 */
+	
 	public Student(String firstName, String lastName, String course, float fee,
 			Date startDate, Date endDate) {
 		super(firstName, lastName);
@@ -38,6 +39,14 @@ public class Student extends Person {
 		// defensive copy
 		this.startDate = new Date(startDate.getTime());;
 		this.endDate = new Date(endDate.getTime());;
+	}
+
+	public Student(int id, String firstName, String lastName, String course, float fee, Date startDate, Date endDate) {
+		super(id, firstName, lastName);
+		this.course = course;
+		this.fee = fee;
+		this.startDate = startDate;
+		this.endDate = endDate;
 	}
 
 	public String getCourse() {
@@ -81,7 +90,7 @@ public class Student extends Person {
 	@Override
 	public String toString() {
 		return "Student [course=" + course + ", fee=" + fee + ", startDate="
-				+ startDate + ", endDate=" + endDate + ", id()=" + getId()
+				+ startDate + ", endDate=" + endDate + ", id=" + getId()
 				+ ", firstName=" + getFirstName() + ", lastName="
 				+ getLastName() + "]";
 	}

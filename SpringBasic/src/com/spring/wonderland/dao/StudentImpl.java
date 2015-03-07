@@ -20,14 +20,20 @@ import com.spring.wonderland.persistent.Student;
  */
 public class StudentImpl implements StudentDAO {
 
-	private DataSource data;
+	private DataSource dataSource;
 
 	/*
 	 * public void setData(DataSource data) { this.data = data; }
 	 */
 	@Override
+	public DataSource getData() {
+		
+		return dataSource;
+	}
+	
+	@Override
 	public void setDataSource(DataSource data) {
-		this.data = data;
+		this.dataSource = data;
 
 	}
 
@@ -39,7 +45,7 @@ public class StudentImpl implements StudentDAO {
 		PreparedStatement ps = null;
 		int status = 0;
 		try {
-			conn = data.getConnection();
+			conn = dataSource.getConnection();
 			ps = conn.prepareStatement(sql);
 			ps.setString(1, student.getFirstName());
 			ps.setString(2, student.getLastName());
@@ -73,7 +79,7 @@ public class StudentImpl implements StudentDAO {
 		Connection conn = null;
 
 		try {
-			conn = data.getConnection();
+			conn = dataSource.getConnection();
 			PreparedStatement ps = conn.prepareStatement(sql);
 			ps.setInt(1, id);
 			Student student = null;
@@ -111,12 +117,12 @@ public class StudentImpl implements StudentDAO {
 		PreparedStatement ps = null;
 		ResultSet rs = null;
 		try {
-			con = data.getConnection();
+			con = dataSource.getConnection();
 			ps = con.prepareStatement(query);
 			rs = ps.executeQuery();
 
 			while (rs.next()) {
-				Student student = new Student(rs.getString("firstName"),
+				Student student = new Student(rs.getInt("studentID"), rs.getString("firstName"),
 						rs.getString("lastName"), rs.getString("course"),
 						rs.getFloat("fee"), rs.getDate("startDate"),
 						rs.getDate("endDate"));
@@ -146,14 +152,14 @@ public class StudentImpl implements StudentDAO {
 
 		try {
 
-			con = data.getConnection();
+			con = dataSource.getConnection();
 
 			ps = con.prepareStatement(query);
 			ps.setString(1, course);
 			rs = ps.executeQuery();
 
 			while (rs.next()) {
-				Student student = new Student(rs.getString("firstName"),
+				Student student = new Student(rs.getInt("studentID"), rs.getString("firstName"),
 						rs.getString("lastName"), rs.getString("course"),
 						rs.getFloat("fee"), rs.getDate("startDate"),
 						rs.getDate("endDate"));
@@ -179,7 +185,7 @@ public class StudentImpl implements StudentDAO {
 		Connection con = null;
 		PreparedStatement ps = null;
 		try {
-			con = data.getConnection();
+			con = dataSource.getConnection();
 			ps = con.prepareStatement(query);
 			ps.setString(1, student.getFirstName());
 			ps.setString(2, student.getLastName());
@@ -214,7 +220,7 @@ public class StudentImpl implements StudentDAO {
 		Connection con = null;
 		PreparedStatement ps = null;
 		try {
-			con = data.getConnection();
+			con = dataSource.getConnection();
 			ps = con.prepareStatement(query);
 			ps.setInt(1, id);
 			int status = ps.executeUpdate();
@@ -236,5 +242,6 @@ public class StudentImpl implements StudentDAO {
 		return 0;
 
 	}
+
 
 }
