@@ -1,0 +1,16 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<!-- Student business object -->
+	<bean id="studentBO" class="com.hibernate.wonderland.bo.StudentBOImpl">
+		<property name="studentDAO" ref="studentDAO" />
+	</bean>
+
+	<!-- Student Data Access Object -->
+	<bean id="studentDAO" class="com.hibernate.wonderland.dao.StudentImpl">
+		<property name="sessionFactory" ref="mysessionFactory"></property>
+	</bean>
+
+</beans>
