@@ -36,8 +36,18 @@ public class Student extends Person {
 		this.course = course;
 		this.fee = fee;
 		// defensive copy
-		this.startDate = new Date(startDate.getTime());;
-		this.endDate = new Date(endDate.getTime());;
+		this.startDate = new Date(startDate.getTime());
+		this.endDate = new Date(endDate.getTime());
+	}
+
+	public Student(int id, String firstName, String lastName, String course,
+			float fee, Date startDate, Date endDate) {
+		super(id, firstName, lastName);
+		this.course = course;
+		this.fee = fee;
+		// defensive copy
+		this.startDate = new Date(startDate.getTime());
+		this.endDate = new Date(endDate.getTime());
 	}
 
 	public String getCourse() {
@@ -61,8 +71,8 @@ public class Student extends Person {
 	}
 
 	public void setStartDate(Date startDate) {
-		this.startDate =  new Date(startDate.getTime());
-				//new Date(startDate.getTime());
+		this.startDate = new Date(startDate.getTime());
+		// new Date(startDate.getTime());
 	}
 
 	public Date getEndDate() {
@@ -70,8 +80,9 @@ public class Student extends Person {
 	}
 
 	public void setEndDate(Date endDate) {
-		this.endDate = new Date(endDate.getTime());; 
-				//new Date(endDate.getTime());
+		this.endDate = new Date(endDate.getTime());
+		;
+		// new Date(endDate.getTime());
 	}
 
 	public static long getSerialversionuid() {
@@ -81,7 +92,7 @@ public class Student extends Person {
 	@Override
 	public String toString() {
 		return "Student [course=" + course + ", fee=" + fee + ", startDate="
-				+ startDate + ", endDate=" + endDate + ", id()=" + getId()
+				+ startDate + ", endDate=" + endDate + ", id=" + super.getId()
 				+ ", firstName=" + getFirstName() + ", lastName="
 				+ getLastName() + "]";
 	}

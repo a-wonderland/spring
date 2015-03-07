@@ -11,7 +11,7 @@ import org.springframework.jdbc.core.RowMapper;
  * @author Alice
  */
 
-public class StudentRowMapper implements RowMapper{
+public class StudentRowMapper implements RowMapper<Object>{
 
 	/**
 	 * Default constructor
@@ -23,10 +23,12 @@ public class StudentRowMapper implements RowMapper{
 	/**
 	 * This method will be pass in queryForObject() method.
 	 * the returned result will call custom mapRow() method to match the value into the properly.
+	 * RowMapper is not supported for list query.
 	 */
 	
 	public Object mapRow(ResultSet rs, int rowNum) throws SQLException {
 		Student student = new Student();
+		student.setId(rs.getInt("studentID"));
 		student.setFirstName(rs.getString("firstName"));
 		student.setLastName(rs.getString("lastName"));
 		student.setCourse(rs.getString("course"));

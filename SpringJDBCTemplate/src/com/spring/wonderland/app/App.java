@@ -172,21 +172,24 @@ public class App {
 
 			try {
 
-				System.out.println(message.getString(Constant.STUDENT_ID));
-				id = Integer.parseInt(reader.readLine());
+				// query all student list
+				//System.out.println(stdDAO.retrieveStudentCollection());
 
-				if (stdDAO.getStudentByID(id) != null) {
-					System.out.println(stdDAO.getStudentByID(id));
-				} else {
-					System.out.println(message.getString(Constant.FAIL));
-				}
-
-				/*
-				 * System.out.println(message.getString(Constant.COURSE));
-				 * course = reader.readLine(); for (Student iter :
-				 * stdDAO.retrieveStudentByCourse(course)) {
-				 * System.out.println(iter); }
+				// query by ID
+				
+				/* System.out.println(message.getString(Constant.STUDENT_ID));
+				 id = Integer.parseInt(reader.readLine());
+				 
+				 if (stdDAO.getStudentByID(id) != null) {
+				 System.out.println(stdDAO.getStudentByID(id)); } else {
+				 System.out.println(message.getString(Constant.FAIL)); }
 				 */
+
+				System.out.println(message.getString(Constant.COURSE));
+				course = reader.readLine();
+				for (Student iter : stdDAO.retrieveStudentByCourse(course)) {
+					System.out.println(iter);
+				}
 
 			} catch (IOException e) {
 				e.printStackTrace();

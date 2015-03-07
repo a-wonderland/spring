@@ -11,6 +11,10 @@ import java.io.Serializable;
 
 public abstract class Person implements Serializable {
 
+	private int id;
+	private String firstName;
+	private String lastName;
+
 	/**
 	 * Explicitly declare a serialVersionUID
 	 */
@@ -33,10 +37,16 @@ public abstract class Person implements Serializable {
 		this.lastName = lastName;
 	}
 
-	private int id;
-	private String firstName;
-	private String lastName;
-
+	/**
+	 * Constructor for retrieve
+	 */
+	public Person(int id, String firstName, String lastName) {
+		super();
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
+	
 	// getter and setter
 	public int getId() {
 		return id;
