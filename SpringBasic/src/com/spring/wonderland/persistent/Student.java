@@ -45,8 +45,9 @@ public class Student extends Person {
 		super(id, firstName, lastName);
 		this.course = course;
 		this.fee = fee;
-		this.startDate = startDate;
-		this.endDate = endDate;
+		// defensive copy
+		this.startDate = new Date(startDate.getTime());
+		this.endDate = new Date(endDate.getTime());
 	}
 
 	public String getCourse() {
